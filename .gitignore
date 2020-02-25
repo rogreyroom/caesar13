@@ -62,3 +62,6 @@ dist/
 # Temporary folders
 tmp/
 temp/
+
+# Jest.js
+coverage
