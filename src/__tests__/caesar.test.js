@@ -42,4 +42,9 @@ describe('Caesar cipher ROT13 function', () => {
 			expect(indexOfFn(someCharToBeFoundInArray, alphabet)).not.toBe(-1);
 		});
 	});
+
+	describe('when caesar13 is working properly', () => {});
+	describe('when caesar13 is not working properly', () => {});
+	describe('when returned caesar13 string is giving the input', () => {});
+	describe('when returned caesar13 string is not giving the input', () => {});
 });
