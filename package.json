@@ -4,12 +4,14 @@
 	"main": "./src/js/index.js",
 	"scripts": {
 		"dev": "parcel './src/index.html'",
-		"build": "parcel build './src/index.html'"
+		"build": "parcel build './src/index.html'",
+		"test": "jest --coverage"
 	},
 	"repository": "https://github.com/rogreyroom/caesar13.git",
 	"author": "Robert Adamczewski <robert@adamczewski.me>",
 	"license": "MIT",
 	"devDependencies": {
+		"jest": "^25.1.0",
 		"parcel-bundler": "^1.12.4"
 	}
 }
