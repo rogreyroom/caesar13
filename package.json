@@ -1,8 +1,15 @@
 {
-  "name": "caesar13",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/rogreyroom/caesar13.git",
-  "author": "Robert Adamczewski <robert@adamczewski.me>",
-  "license": "MIT"
+	"name": "caesar13",
+	"version": "1.0.0",
+	"main": "./src/js/index.js",
+	"scripts": {
+		"dev": "parcel './src/index.html'",
+		"build": "parcel build './src/index.html'"
+	},
+	"repository": "https://github.com/rogreyroom/caesar13.git",
+	"author": "Robert Adamczewski <robert@adamczewski.me>",
+	"license": "MIT",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.4"
+	}
 }
