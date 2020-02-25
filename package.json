@@ -1,0 +1,8 @@
+{
+  "name": "caesar13",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rogreyroom/caesar13.git",
+  "author": "Robert Adamczewski <robert@adamczewski.me>",
+  "license": "MIT"
+}
