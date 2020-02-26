@@ -21,7 +21,6 @@ function runCaesar(e) {
 		const rot = rotSelect.options[rotSelect.selectedIndex].value;
 
 		if (inputText.value !== '') {
-			console.log(caesar(inputText.value, rot));
 			outputText.textContent = caesar(inputText.value, rot);
 		}
 	}
