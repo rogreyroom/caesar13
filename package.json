@@ -5,7 +5,17 @@
 	"scripts": {
 		"dev": "parcel './src/index.html'",
 		"build": "parcel build './src/index.html'",
-		"test": "jest --coverage"
+		"test": "jest",
+		"test:clear": "jest --clearCache"
+	},
+	"jest": {
+		"collectCoverage": true,
+		"coverageReporters": [
+			"html"
+		],
+		"roots": [
+			"./src"
+		]
 	},
 	"repository": "https://github.com/rogreyroom/caesar13.git",
 	"author": "Robert Adamczewski <robert@adamczewski.me>",
