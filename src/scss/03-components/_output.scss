@@ -1,0 +1,22 @@
+// .output-section {
+.output-section {
+	align-self: end;
+	grid-area: output;
+	display: flex;
+	margin: .5rem;
+
+	background: transparent;
+
+	&__text {
+		color: var(--body-text-color);
+		border-radius: 0;
+		border-bottom: 2px solid var(--accent-color);
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 0 auto;
+		padding: 0;
+		width: 75%;
+		height: max-content;
+		text-align: center;
+	}
+}

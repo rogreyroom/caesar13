@@ -1,0 +1,19 @@
+/* Global */
+
+// Create css variables
+$vars: map-merge($colors, $dimensions);
+
+:root {
+	@each $property, $value in $vars {
+		--#{$property}: #{$value};
+	}
+}
+
+body {
+	font-family: map-get($fonts, ff-body);
+	font-weight: map-get($fonts, fw-normal);
+	font-size: map-get($fonts, fs-base);
+	line-height: map-get($fonts, lh-base);
+	background: var(--c-bg-gradient);
+	color: var(--c-black);
+}

@@ -1,0 +1,7 @@
+/* Page main content */
+.main {
+	display: grid;
+	grid-template-areas: "header input" "header output" "header .";
+	grid-template-columns: 0 4fr;
+	grid-template-rows: 2fr 2fr 10fr;
+}
