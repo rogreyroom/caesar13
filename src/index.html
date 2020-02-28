@@ -6,25 +6,52 @@
     <title>Caesar cipher ROT13</title>
     <script src="./js/index.js" defer></script>
 </head>
-<body>
+<body class="body">
+
+
     <main class="main">
-        <section class="input">
-            <input
-                type="text"
-                class="input-text--js"
-            />
+        <header class="header">
+            <div class="header__hero-img"></div>
+            <div class="header__hero-text">
+                <span class=header__first-word>CAESAR</span>
+                <span class=header__second-word>OT</span>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <p class='input-section__text'>
+                <input
+                    type="text"
+                    class="input-section__input input-text--js"
+                />
+            </p>
+            <div class="input-section__select-wrapper arrow--js">
+                    <select
+                        name="rot"
+                        id="rot"
+                        class='input-section__select rot-select--js'
+                    >
+                    </select>
+            </div>
         </section>
-        <section class="output">
-            <p class="output-text--js"></p>
-        </section>
-        <section class="rot">
-            <select
-                name="rot"
-                id="rot"
-                class='rot-select--js'
-            >
-            </select>
+
+        <section class="output-section">
+            <p class="output-section__text output-text--js"></p>
         </section>
     </main>
+    <svg
+        class="body__bottom-bg bottom-bg--js"
+        height="655"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 458.5L28.8 589.5L58.8 655H87.6L117.6 458.5L146.4 65.5L176.4 458.5L205.2 393L235.2 262L264 655L294 65.5H322.8L352.8 262L381.6 196.5L411.6 262L440.4 458.5L470.4 262L499.2 655H529.2L558 327.5L588 589.5L616.8 327.5L646.8 589.5L675.6 65.5L705.6 262L734.4 458.5L764.4 327.5L793.2 262L823.2 327.5L852 65.5L882 655L910.8 393L940.8 327.5L969.6 524L999.6 131L1028.4 196.5L1058.4 0L1087.2 589.5L1117.2 262L1146 458.5L1176 589.5L1204.8 393L1234.8 196.5L1263.6 327.5L1293.6 65.5L1322.4 589.5L1352.4 196.5L1381.2 655L1411.2 393L1440 131V655H1411.2H1381.2H1352.4H1322.4H1293.6H1263.6H1234.8H1204.8H1176H1146H1117.2H1087.2H1058.4H1028.4H999.6H969.6H940.8H910.8H882H852H823.2H793.2H764.4H734.4H705.6H675.6H646.8H616.8H588H558H529.2H499.2H470.4H440.4H411.6H381.6H352.8H322.8H294H264H235.2H205.2H176.4H146.4H117.6H87.6H58.8H28.8H0V458.5Z"
+            fill="#F5AF87"
+        />
+    </svg>
+
 </body>
 </html>
