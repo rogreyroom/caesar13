@@ -1,4 +1,5 @@
 import '../scss/style.scss';
+import view from './view';
 import caesar from './caesar';
 
 const rotSelect = document.querySelector('.rot-select--js');
@@ -26,4 +27,10 @@ function runCaesar(e) {
 	}
 }
 
+function clearFields() {
+	inputText.value = '';
+	outputText.textContent = '';
+}
+
+inputText.addEventListener('click', clearFields);
 inputText.addEventListener('keyup', runCaesar);
