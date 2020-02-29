@@ -3,6 +3,12 @@
 In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 _[Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)_
 
+## Website 🚀
+
+[go to the website](https://caesar13.github.io/)
+
+![Caesar cipher website screen](public/assets/images/caesar13.png)
+
 ## What is it
 
 Project to practice javascript skills.
@@ -24,8 +30,6 @@ Tests are made for ROT = 13 but function is written to use any ROT, just change 
 
 * build
 ```npm run build or yarn build```
-
-## Website 🚀
 
 ## Installation
 
