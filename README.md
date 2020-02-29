@@ -31,6 +31,9 @@ Tests are made for ROT = 13 but function is written to use any ROT, just change 
 * build
 ```npm run build or yarn build```
 
+* deploy
+```npm run deploy or yarn deploy```
+
 ## Installation
 
     ```
