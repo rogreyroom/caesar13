@@ -5,4 +5,8 @@
 	grid-template-columns: 0 4fr;
 	grid-template-rows: 2fr 2fr 10fr;
 	width: 100%;
+
+	@media (min-width: map-get($dimensions, min-width)) {
+		grid-template-columns: 2fr 4fr;
+	}
 }

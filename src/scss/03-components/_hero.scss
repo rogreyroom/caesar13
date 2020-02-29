@@ -5,11 +5,15 @@
 
 	&__hero-img {
 		background: url('../img/julius-caesar.png');
-		background-position: center;
+		background-position: top;
 		width: 100%;
 		height: 100vh;
 		z-index: -1;
 		display: none;
+
+		@media (min-width: map-get($dimensions, min-width)) {
+			display: block;
+		}
 	}
 
 	&__hero-text {
