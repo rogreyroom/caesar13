@@ -7,7 +7,7 @@ _[Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)_
 
 [go to the website](https://caesar13.github.io/)
 
-![Caesar cipher website screen](public/assets/images/caesar13.png)
+![Caesar cipher website screen](src/img/caesar13.png)
 
 ## What is it
 
