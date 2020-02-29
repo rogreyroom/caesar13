@@ -6,7 +6,8 @@
 		"test": "jest",
 		"test:clear": "jest --clearCache",
 		"dev": "parcel './src/index.html'",
-		"build": "parcel build './src/index.html' --public-url '.'",
+		"pre-build": "rm -rf dist",
+		"build": "yarn pre-build && parcel build './src/index.html' --public-url '.'",
 		"deploy": "gh-pages -d dist"
 	},
 	"jest": {
