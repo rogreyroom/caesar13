@@ -3,10 +3,11 @@
 	"version": "1.0.0",
 	"main": "./src/js/index.js",
 	"scripts": {
+		"test": "jest",
+		"test:clear": "jest --clearCache",
 		"dev": "parcel './src/index.html'",
 		"build": "parcel build './src/index.html'",
-		"test": "jest",
-		"test:clear": "jest --clearCache"
+		"deploy": "gh-paged -d dist"
 	},
 	"jest": {
 		"collectCoverage": true,
@@ -21,6 +22,7 @@
 	"author": "Robert Adamczewski <robert@adamczewski.me>",
 	"license": "MIT",
 	"devDependencies": {
+		"gh-pages": "^2.2.0",
 		"jest": "^25.1.0",
 		"parcel-bundler": "^1.12.4",
 		"sass": "^1.26.1"
