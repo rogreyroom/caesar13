@@ -1,6 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:900&display=swap&subset=latin-ext');
 // prettier-ignore
 $fonts: (
   ff-body: (
@@ -27,11 +26,10 @@ $mq: (
 // Dimensions
 // prettier-ignore
 $dimensions: (
-  max-width: 320px,
-  content-width: minmax(288px, 382px),
-); // footer-height = double padding + font-size
+  min-width: 736px,
+);
 
-// Colors - ok
+// Colors
 // prettier-ignore
 $colors: (
   bg-gradient: linear-gradient(180deg, #f1ca7f 0%, #fcb098 100%),
