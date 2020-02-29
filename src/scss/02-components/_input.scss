@@ -1,0 +1,58 @@
+.input-section {
+	align-self: end;
+	justify-self: center;
+	grid-area: input;
+	display: flex;
+	margin: .5rem 1rem;
+
+	&__select-wrapper {
+		position: relative;
+		width: 40px;
+
+		&::after {
+			content: "▼";
+			font-size: .8rem;
+			top: 10%;
+			right: 6px;
+			position: absolute;
+			color: var(--accent-color);
+			z-index: -1;
+		}
+	}
+
+	&__select-wrapper,
+	&__text {
+		color: var(--body-text-color);
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__text {
+		margin-right: 1rem;
+		word-wrap: break-word;
+	}
+
+	&__select {
+		cursor: pointer;
+	}
+}
+
+.input-section__input,
+.input-section__select {
+	-webkit-appearance: none;
+	appearance: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid var(--accent-color);
+	background: transparent;
+	width: 100%;
+
+	&:focus {
+		outline: solid var(--accent-focus-color);
+	}
+}

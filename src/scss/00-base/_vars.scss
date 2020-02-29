@@ -1,0 +1,40 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:900&display=swap&subset=latin-ext');
+// prettier-ignore
+$fonts: (
+  ff-body: (
+    'Roboto',
+    sans-serif,
+  ),
+  ff-header: (
+    'Roboto Slab',
+    sans-serif,
+  ),
+  fw-normal: 400,
+  fs-base: 16px,
+  lh-base: 1.5,
+);
+
+// Media queries
+// prettier-ignore
+$mq: (
+  small: 568px,
+  medium: 736px,
+  large: 1024px,
+);
+
+// Dimensions
+// prettier-ignore
+$dimensions: (
+  min-width: 736px,
+);
+
+// Colors
+// prettier-ignore
+$colors: (
+  bg-gradient: linear-gradient(180deg, #f1ca7f 0%, #fcb098 100%),
+  body-text-color: #280707,
+  header-text-color: rgba(255, 231, 231, 0.83),
+  accent-color: #d31212,
+  accent-focus-color: rgba(211, 18, 18, 0.55)
+);

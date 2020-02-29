@@ -5,7 +5,7 @@ function caesar(input, rot) {
 	if (input.length < 1) {
 		throw new Error('The string is empty!');
 	}
-
+	console.log(input);
 	const inputArray = [
 		...input
 	];
@@ -34,6 +34,7 @@ function findNewChar(char, rot) {
 	const alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
 	const idx = alphabet.indexOf(char.toLowerCase());
 	let newIdx;
+	rot = +rot;
 
 	if (idx + rot > alphabet.length - 1) {
 		newIdx = rot - (alphabet.length - idx);

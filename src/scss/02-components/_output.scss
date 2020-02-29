@@ -1,0 +1,22 @@
+.output-section {
+	align-self: end;
+	justify-self: center;
+	grid-area: output;
+	display: flex;
+	margin: .5rem 1rem;
+	min-width: 252px;
+	background: transparent;
+
+	&__text {
+		color: var(--body-text-color);
+		border-radius: 0;
+		border-bottom: 2px solid var(--accent-color);
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		word-wrap: break-word;
+	}
+}

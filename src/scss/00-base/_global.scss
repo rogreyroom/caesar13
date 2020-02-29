@@ -1,0 +1,15 @@
+/* Global */
+
+// Create css variables
+:root {
+	@each $property, $value in $colors {
+		--#{$property}: #{$value};
+	}
+}
+
+body {
+	font-family: map-get($fonts, ff-body);
+	font-weight: map-get($fonts, fw-normal);
+	font-size: map-get($fonts, fs-base);
+	line-height: map-get($fonts, lh-base);
+}
