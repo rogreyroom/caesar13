@@ -7,7 +7,7 @@
 		"test:clear": "jest --clearCache",
 		"dev": "parcel './src/index.html'",
 		"build": "parcel build './src/index.html'",
-		"deploy": "gh-paged -d dist"
+		"deploy": "gh-pages -d dist"
 	},
 	"jest": {
 		"collectCoverage": true,
