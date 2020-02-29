@@ -5,7 +5,7 @@ _[Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)_
 
 ## Website 🚀
 
-[go to the website](https://caesar13.github.io/)
+[go to the website](https://rogreyroom.github.io/caesar13/)
 
 ![Caesar cipher website screen](src/img/caesar13.png)
 
