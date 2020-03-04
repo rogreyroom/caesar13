@@ -19,7 +19,7 @@ function caesar(input, rot) {
 
 		if (isChar) {
 			const newChar = findNewChar(char, rot);
-			isUpperCase ? result.push(newChar.toUpperCase()) : result.push(newChar);
+			result.push(isUpperCase ? newChar.toUpperCase() : newChar);
 		} else {
 			result.push(char);
 		}
