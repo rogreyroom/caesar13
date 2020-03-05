@@ -26,8 +26,7 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 			...inputWord
 		];
 		const indexOfFn = jest.fn((char, arr) => arr.indexOf(char.toLowerCase()));
-		// prettier-ignore
-		const alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
+		const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 		describe.each(inputWordArray)('check char %s', char => {
 			if (char === char.toUpperCase()) {
