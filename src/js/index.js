@@ -19,7 +19,8 @@ rotOptions.forEach(option => {
 });
 
 function runCaesar({ key, target }) {
-	if (key === 'Enter' || (target !== inputText && target !== rotSelect)) {
+	const userClickedBody = target !== inputText && target !== rotSelect;
+	if (key === 'Enter' || userClickedBody) {
 		const rot = rotSelect.options[rotSelect.selectedIndex].value;
 
 		if (inputText.value !== '') {
