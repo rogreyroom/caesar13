@@ -9,13 +9,11 @@ function caesar(input, rot) {
 	const inputArray = [
 		...input
 	];
-	let isUpperCase = false;
-	let isChar = false;
 	const result = [];
 
 	inputArray.forEach(char => {
-		if (char === char.toUpperCase()) isUpperCase = true;
-		if (char.match(/[a-z]|[A-Z]/g)) isChar = true;
+		let isUpperCase = char === char.toUpperCase() ? true : false;
+		let isChar = char.match(/[a-z]|[A-Z]/g) ? true : false;
 
 		if (isChar) {
 			const newChar = findNewChar(char, rot);
