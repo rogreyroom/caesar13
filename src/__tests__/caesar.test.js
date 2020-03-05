@@ -21,62 +21,64 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 	});
 
 	describe('when ciphering input single character', () => {
-		const inputWord = 'a1b';
-		const inputWordArray = [
-			...inputWord
-		];
+		const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+		const checkIfCharIsUpperCaseFn = jest.fn(char => char === char.toUpperCase());
 		const indexOfFn = jest.fn((char, arr) => arr.indexOf(char.toLowerCase()));
-		// prettier-ignore
-		const alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
 
-		describe.each(inputWordArray)('check char %s', char => {
-			if (char === char.toUpperCase()) {
-				test('is upper case', () => {
-					expect(char === char.toUpperCase()).toBeTruthy();
-				});
-			} else {
-				test('is upper case', () => {
-					expect(char === char.toUpperCase()).toBeFalsy();
-				});
-			}
-			if (char.match(/[a-z]|[A-Z]/g)) {
-				test('matches pattern /[a-z]|[A-Z]/g', () => {
-					expect(char).toMatch(/[a-z]|[A-Z]/g);
-				});
-				test('find indexOf lowercase character inside the alphabet array', () => {
-					expect(indexOfFn(char, alphabet)).not.toBe(-1);
-				});
-			}
+		test(`check if char(A) is uppercse`, () => {
+			const char = 'A';
+			expect(checkIfCharIsUpperCaseFn(char)).toBeTruthy();
+		});
+
+		test(`check if char(a) is not uppercse`, () => {
+			const char = 'a';
+			expect(checkIfCharIsUpperCaseFn(char)).toBeFalsy();
+		});
+
+		test(`check if char(B) matches pattern /[a-z]|[A-Z]/g'`, () => {
+			const char = 'B';
+			expect(char).toMatch(/[a-z]|[A-Z]/g);
+		});
+
+		test('find indexOf char(H) inside the alphabet array', () => {
+			const char = 'H';
+			expect(indexOfFn(char, alphabet)).not.toBe(-1);
 		});
 	});
 
 	describe(`when caesar${rot} is working properly`, () => {
-		test('it should not change number position', () => {
+		it('should not change number position', () => {
 			const inputString = 'a1b';
 			expect(caesar(inputString, rot)).toBe('n1o');
 		});
-		test('it should not change character case', () => {
+		it('should not change character case', () => {
 			const inputString = 'A1b';
 			expect(caesar(inputString, rot)).toBe('N1o');
 		});
-		test('it should be equal when mix string and other characters', () => {
+		it('should be equal when mix string and other characters', () => {
 			const inputString = 'a1b';
 			expect(caesar(inputString, rot)).toBe('n1o');
 		});
-		test('it should be equal when only othe characters', () => {
+		it('should be equal when only other characters', () => {
 			const inputString = '0123456789';
 			expect(caesar(inputString, rot)).toBe('0123456789');
 		});
 	});
 
 	describe(`when reversing caesar${rot} result string should give the input`, () => {
-		const input = 'a1b';
-		const result = caesar(input, rot);
-		test('it should be equal when encryption', () => {
-			expect(result).toBe('n1o');
+		let input = '';
+		let result = '';
+
+		beforeEach(() => {
+			input = 'dJqE123ooAbb5';
+			result = caesar(input, rot);
 		});
-		test('it should be equal when decryption', () => {
-			const res = caesar(result, rot);
+
+		it('should be equal when encryption', () => {
+			expect(result).toBe('qWdR123bbNoo5');
+		});
+		it('should be equal when decryption', () => {
+			let res = caesar(result, rot);
 			expect(res).toBe(input);
 		});
 	});

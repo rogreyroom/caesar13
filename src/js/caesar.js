@@ -1,21 +1,19 @@
-function caesar(input, rot) {
+export default function caesar(input, rot) {
 	if (typeof input !== 'string') {
 		throw new TypeError("It's not a String!");
 	}
 	if (input.length < 1) {
 		throw new Error('The string is empty!');
 	}
-	console.log(input);
+
 	const inputArray = [
 		...input
 	];
-	let isUpperCase = false;
-	let isChar = false;
 	const result = [];
 
 	inputArray.forEach(char => {
-		if (char === char.toUpperCase()) isUpperCase = true;
-		if (char.match(/[a-z]|[A-Z]/g)) isChar = true;
+		let isUpperCase = char === char.toUpperCase() ? true : false;
+		let isChar = char.match(/[a-z]|[A-Z]/g) ? true : false;
 
 		if (isChar) {
 			const newChar = findNewChar(char, rot);
@@ -30,18 +28,16 @@ function caesar(input, rot) {
 }
 
 function findNewChar(char, rot) {
-	// prettier-ignore
-	const alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
+	let theRot = rot;
+	const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 	const idx = alphabet.indexOf(char.toLowerCase());
 	let newIdx;
-	rot = +rot;
+	theRot = +theRot;
 
-	if (idx + rot > alphabet.length - 1) {
-		newIdx = rot - (alphabet.length - idx);
+	if (idx + theRot > alphabet.length - 1) {
+		newIdx = theRot - (alphabet.length - idx);
 	} else {
-		newIdx = idx + rot;
+		newIdx = idx + theRot;
 	}
 	return alphabet[newIdx];
 }
-
-module.exports = caesar;
