@@ -6,17 +6,6 @@ const bodyTarget = document.querySelector('.body--js');
 const rotSelect = document.querySelector('.rot-select--js');
 const inputText = document.querySelector('.input-text--js');
 const outputText = document.querySelector('.output-text--js');
-const rotOptions = [
-	...Array(26).keys()
-];
-
-rotOptions.forEach(option => {
-	const newOption = document.createElement('option');
-	newOption.value = option;
-	newOption.text = option;
-	if (option === 13) newOption.selected = true;
-	rotSelect.add(newOption);
-});
 
 function runCaesar({ key, target }) {
 	const userClickedBody = target !== inputText && target !== rotSelect;
