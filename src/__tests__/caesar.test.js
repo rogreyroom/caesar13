@@ -47,29 +47,29 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 	});
 
 	describe(`when caesar${rot} is working properly`, () => {
-		test('it should not change number position', () => {
+		it('should not change number position', () => {
 			const inputString = 'a1b';
 			expect(caesar(inputString, rot)).toBe('n1o');
 		});
-		test('it should not change character case', () => {
+		it('should not change character case', () => {
 			const inputString = 'A1b';
 			expect(caesar(inputString, rot)).toBe('N1o');
 		});
-		test('it should be equal when mix string and other characters', () => {
+		it('should be equal when mix string and other characters', () => {
 			const inputString = 'a1b';
 			expect(caesar(inputString, rot)).toBe('n1o');
 		});
-		test('it should be equal when only othe characters', () => {
+		it('should be equal when only other characters', () => {
 			const inputString = '0123456789';
 			expect(caesar(inputString, rot)).toBe('0123456789');
 		});
 	});
 
 	describe(`when reversing caesar${rot} result string should give the input`, () => {
-		const input = 'a1b';
+		const input = 'dJqE123ooAbb5';
 		const result = caesar(input, rot);
 		test('it should be equal when encryption', () => {
-			expect(result).toBe('n1o');
+			expect(result).toBe('qWdR123bbNoo5');
 		});
 		test('it should be equal when decryption', () => {
 			const res = caesar(result, rot);
