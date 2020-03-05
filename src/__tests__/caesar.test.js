@@ -66,13 +66,19 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 	});
 
 	describe(`when reversing caesar${rot} result string should give the input`, () => {
-		const input = 'dJqE123ooAbb5';
-		const result = caesar(input, rot);
-		test('it should be equal when encryption', () => {
+		let input = '';
+		let result = '';
+
+		beforeEach(() => {
+			input = 'dJqE123ooAbb5';
+			result = caesar(input, rot);
+		});
+
+		it('should be equal when encryption', () => {
 			expect(result).toBe('qWdR123bbNoo5');
 		});
-		test('it should be equal when decryption', () => {
-			const res = caesar(result, rot);
+		it('should be equal when decryption', () => {
+			let res = caesar(result, rot);
 			expect(res).toBe(input);
 		});
 	});
