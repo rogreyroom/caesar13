@@ -1,4 +1,4 @@
-function caesar(input, rot) {
+export default function caesar(input, rot) {
 	if (typeof input !== 'string') {
 		throw new TypeError("It's not a String!");
 	}
@@ -29,7 +29,6 @@ function caesar(input, rot) {
 
 function findNewChar(char, rot) {
 	let theRot = rot;
-	// prettier-ignore
 	const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 	const idx = alphabet.indexOf(char.toLowerCase());
 	let newIdx;
@@ -42,5 +41,3 @@ function findNewChar(char, rot) {
 	}
 	return alphabet[newIdx];
 }
-
-module.exports = caesar;
