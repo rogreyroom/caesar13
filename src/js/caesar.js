@@ -5,7 +5,7 @@ function caesar(input, rot) {
 	if (input.length < 1) {
 		throw new Error('The string is empty!');
 	}
-	console.log(input);
+
 	const inputArray = [
 		...input
 	];
