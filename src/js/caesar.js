@@ -30,16 +30,17 @@ function caesar(input, rot) {
 }
 
 function findNewChar(char, rot) {
+	let theRot = rot;
 	// prettier-ignore
 	const alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
 	const idx = alphabet.indexOf(char.toLowerCase());
 	let newIdx;
-	rot = +rot;
+	theRot = +theRot;
 
-	if (idx + rot > alphabet.length - 1) {
-		newIdx = rot - (alphabet.length - idx);
+	if (idx + theRot > alphabet.length - 1) {
+		newIdx = theRot - (alphabet.length - idx);
 	} else {
-		newIdx = idx + rot;
+		newIdx = idx + theRot;
 	}
 	return alphabet[newIdx];
 }
