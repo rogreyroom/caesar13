@@ -23,6 +23,8 @@
 	"author": "Robert Adamczewski <robert@adamczewski.me>",
 	"license": "MIT",
 	"devDependencies": {
+		"@types/jest": "^25.1.3",
+		"@types/node": "^13.7.7",
 		"gh-pages": "^2.2.0",
 		"jest": "^25.1.0",
 		"parcel-bundler": "^1.12.4",
