@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-import view from './view';
+import './view';
 import caesar from './caesar';
 
 const bodyTarget = document.querySelector('.body--js');
