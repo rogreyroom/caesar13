@@ -21,31 +21,28 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 	});
 
 	describe('when ciphering input single character', () => {
-		const inputWord = 'a1b';
-		const inputWordArray = [
-			...inputWord
-		];
-		const indexOfFn = jest.fn((char, arr) => arr.indexOf(char.toLowerCase()));
 		const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+		const checkIfCharIsUpperCaseFn = jest.fn(char => char === char.toUpperCase());
+		const indexOfFn = jest.fn((char, arr) => arr.indexOf(char.toLowerCase()));
 
-		describe.each(inputWordArray)('check char %s', char => {
-			if (char === char.toUpperCase()) {
-				test('is upper case', () => {
-					expect(char === char.toUpperCase()).toBeTruthy();
-				});
-			} else {
-				test('is upper case', () => {
-					expect(char === char.toUpperCase()).toBeFalsy();
-				});
-			}
-			if (char.match(/[a-z]|[A-Z]/g)) {
-				test('matches pattern /[a-z]|[A-Z]/g', () => {
-					expect(char).toMatch(/[a-z]|[A-Z]/g);
-				});
-				test('find indexOf lowercase character inside the alphabet array', () => {
-					expect(indexOfFn(char, alphabet)).not.toBe(-1);
-				});
-			}
+		test(`check if char(A) is uppercse`, () => {
+			const char = 'A';
+			expect(checkIfCharIsUpperCaseFn(char)).toBeTruthy();
+		});
+
+		test(`check if char(a) is not uppercse`, () => {
+			const char = 'a';
+			expect(checkIfCharIsUpperCaseFn(char)).toBeFalsy();
+		});
+
+		test(`check if char(B) matches pattern /[a-z]|[A-Z]/g'`, () => {
+			const char = 'B';
+			expect(char).toMatch(/[a-z]|[A-Z]/g);
+		});
+
+		test('find indexOf char(H) inside the alphabet array', () => {
+			const char = 'H';
+			expect(indexOfFn(char, alphabet)).not.toBe(-1);
 		});
 	});
 
