@@ -1,4 +1,4 @@
-import caesar  from '../js/caesar'
+import caesar from '../js/caesar';
 const rot = 13;
 
 describe(`Caesar cipher ROT${rot} function`, () => {
@@ -20,7 +20,7 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 		});
 	});
 
-	describe('when ciphering input single character', () => {
+	describe('when checking input single character', () => {
 		const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 		const checkIfCharIsUpperCaseFn = jest.fn(char => char === char.toUpperCase());
 		const indexOfFn = jest.fn((char, arr) => arr.indexOf(char.toLowerCase()));
@@ -74,10 +74,10 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 			result = caesar(input, rot);
 		});
 
-		it('should be equal when encryption', () => {
+		it(`should encrypt initial message with Rot${rot}`, () => {
 			expect(result).toBe('qWdR123bbNoo5');
 		});
-		it('should be equal when decryption', () => {
+		it(`should be same as initial message when encrypted with Rot${rot} for the second time`, () => {
 			let res = caesar(result, rot);
 			expect(res).toBe(input);
 		});
