@@ -28,11 +28,10 @@ export default function caesar(input, rot) {
 }
 
 function findNewChar(char, rot) {
-	let theRot = rot;
+	const theRot = +rot;
 	const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 	const idx = alphabet.indexOf(char.toLowerCase());
 	let newIdx;
-	theRot = +theRot;
 
 	if (idx + theRot > alphabet.length - 1) {
 		newIdx = theRot - (alphabet.length - idx);
