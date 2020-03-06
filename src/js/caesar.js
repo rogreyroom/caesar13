@@ -12,8 +12,8 @@ export default function caesar(input, rot) {
 	const result = [];
 
 	inputArray.forEach(char => {
-		let isUpperCase = char === char.toUpperCase() ? true : false;
-		let isChar = char.match(/[a-z]|[A-Z]/g) ? true : false;
+		const isUpperCase = char === char.toUpperCase();
+		const isChar = !!char.match(/[a-z]|[A-Z]/g);
 
 		if (isChar) {
 			const newChar = findNewChar(char, rot);
@@ -21,8 +21,6 @@ export default function caesar(input, rot) {
 		} else {
 			result.push(char);
 		}
-		isChar = false;
-		isUpperCase = false;
 	});
 	return result.join('');
 }
