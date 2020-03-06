@@ -74,10 +74,10 @@ describe(`Caesar cipher ROT${rot} function`, () => {
 			result = caesar(input, rot);
 		});
 
-		it('should be equal when encryption', () => {
+		it(`should encrypt initial message with Rot${rot}`, () => {
 			expect(result).toBe('qWdR123bbNoo5');
 		});
-		it('should be equal when decryption', () => {
+		it(`should be same as initial message when encrypted with Rot${rot} for the second time`, () => {
 			let res = caesar(result, rot);
 			expect(res).toBe(input);
 		});
