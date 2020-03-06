@@ -1,4 +1,4 @@
-const caesar = require('../js/caesar');
+import caesar  from '../js/caesar'
 const rot = 13;
 
 describe(`Caesar cipher ROT${rot} function`, () => {
